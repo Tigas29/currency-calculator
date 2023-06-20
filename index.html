@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <title>Conversor de moedas</title>
+  </head>
+  <body>
+    <main class="container">
+      <label>
+        Quantia
+        <input
+          placeholder="10.00000"
+          id="amount"
+          type="number"
+          min="1"
+          step="any"
+        />
+      </label>
+
+      <label>
+        De :
+        <select name="coin" id="coinFrom">
+          <option value="real">Real</option>
+          <option value="euro">Euro</option>
+          <option value="dolar">Dolas</option>
+        </select>
+      </label>
+      <label>
+        Para :
+        <select name="coin" id="coinFor">
+          <option value="euro">Euro</option>
+          <option value="real">Real</option>
+          <option value="dolar">Dolas</option>
+        </select>
+      </label>
+      <div class="conversionBox hiden">
+        <h3>A conversão foi de :</h3>
+        <p id="result"></p>
+      </div>
+      <button type="button" id="btn">Converter</button>
+    </main>
+  </body>
+</html>
