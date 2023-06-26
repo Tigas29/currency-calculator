@@ -4,42 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Conversor de moedas</title>
   </head>
   <body>
     <main class="container">
       <label>
-        Quantia
-        <input
-          placeholder="10.00000"
-          id="amount"
-          type="number"
-          min="1"
-          step="any"
-        />
+        <p>Valor</p>
+        <input placeholder="10.00000" id="amount" type="number" min="1" />
       </label>
 
       <label>
-        De :
+        <p>Converter de</p>
         <select name="coin" id="coinFrom">
-          <option value="real">Real</option>
-          <option value="euro">Euro</option>
-          <option value="dolar">Dolas</option>
+          <option value="Real">R$ Real</option>
+          <option value="Euro">€ Euro</option>
+          <option value="Dolar">US$ Dólar americano</option>
         </select>
       </label>
       <label>
-        Para :
-        <select name="coin" id="coinFor">
-          <option value="euro">Euro</option>
-          <option value="real">Real</option>
-          <option value="dolar">Dolas</option>
+        <p>Converter Para</p>
+        <select name="coins" id="coinFor">
+          <option value="Real">R$ Real</option>
+          <option value="Euro">€ Euro</option>
+          <option value="Dolar">US$ Dólar americano</option>
         </select>
       </label>
-      <div class="conversionBox hiden">
-        <h3>A conversão foi de :</h3>
-        <p id="result"></p>
-      </div>
+
       <button type="button" id="btn">Converter</button>
+
+      <div class="conversionBox hiden">
+        <div class="result">
+          <!-- <img src="http://placehold" alt="result" /> -->
+          <span></span>
+          <h3>Real</h3>
+          <p>R$ 10.000,00</p>
+        </div>
+        <div class="result">
+          <!-- <img src="http://placehold" alt="result" /> -->
+          <span></span>
+          <h3>Real</h3>
+          <p>R$ 10.000,00</p>
+        </div>
+      </div>
     </main>
   </body>
 </html>
