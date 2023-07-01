@@ -13,6 +13,9 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+p {
+  display: inline;
+}
 
 .container {
   border-radius: 20px;
@@ -31,7 +34,9 @@ label {
   justify-content: center;
   flex-direction: column;
 }
-
+span {
+  display: inline;
+}
 label p {
   color: #777;
   font-size: 14px;
@@ -40,6 +45,12 @@ label p {
   line-height: 18px;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 0.2rem;
+}
 label input,
 select {
   padding-bottom: 1rem;
@@ -95,6 +106,7 @@ button {
   font-size: 14px;
   font-family: Roboto;
   line-height: 18px;
+  height: 1rem;
 }
 
 .result p {
@@ -103,4 +115,7 @@ button {
   font-family: Roboto;
   font-weight: 700;
   line-height: 18px;
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: row;
 }

@@ -17,7 +17,14 @@
     <main class="container">
       <label>
         <p>Valor</p>
-        <input placeholder="10.00000" id="amount" type="number" min="1" />
+        <input
+          placeholder="10.00000"
+          id="amount"
+          type="text"
+          min="1"
+          maxlength="10"
+          onkeyup="Formatar()"
+        />
       </label>
 
       <label>
@@ -31,8 +38,8 @@
       <label>
         <p>Converter Para</p>
         <select name="coins" id="coinFor">
-          <option value="Real">R$ Real</option>
           <option value="Euro">€ Euro</option>
+          <option value="Real">R$ Real</option>
           <option value="Dolar">US$ Dólar americano</option>
         </select>
       </label>
@@ -41,15 +48,23 @@
 
       <div class="conversionBox hiden">
         <div class="result">
-          <img src="assets/brasil.png" alt="result" />
-          <h3>Real</h3>
-          <p>R$ 10.000,00</p>
+          <img id="imgResultFrom" src="assets/brasil.png" alt="result" />
+          <h3 id="resultFrom"></h3>
+
+          <div class="flex">
+            <p id="coinFromResult"></p>
+            <p id="amountFrom"></p>
+          </div>
         </div>
         <img src="assets/arrow.png" alt="seta roxa" />
         <div class="result">
-          <img src="assets/euro.png" alt="result" />
-          <h3>Euro</h3>
-          <p>R$ 10.000,00</p>
+          <img id="imgResultFor" src="assets/euro.png" alt="result" />
+
+          <h3 id="resultFor"></h3>
+          <div class="flex">
+            <p id="coinForResult"></p>
+            <p id="amountFor"></p>
+          </div>
         </div>
       </div>
     </main>
