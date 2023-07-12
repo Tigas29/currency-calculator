@@ -1,9 +1,9 @@
 <h1 align="center">
-Weather Forecast System 
+Currency Calculator
 </h1>
 <h3> 
-This application made in Vanilla JavaScript was thought to be a very easy usefull weather forecast system 
-to show some of my skills in Programming logic and learn more about JavaScript. In this project I used datas from a public api with asynchronous programming.
+This application made in Vanilla JavaScript was thought to be a very easy usefull currency calculator system 
+to show some of my skills in Programming logic and learn more about JavaScript. In this project I used a execution algorithm and operations by selection.
 
 </h3>
   
@@ -17,7 +17,6 @@ to show some of my skills in Programming logic and learn more about JavaScript. 
 ## :rocket: Technologies
 
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [Public Api](https://openweathermap.org/api)
 - [VS Code](https://code.visualstudio.com/) with [EditorConfig](https://editorconfig.org/), [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/).
 
 ## :information_source: How To Use
@@ -26,7 +25,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com), insta
 
 ```bash
 # Clone this repository
-$ git clone (https://github.com/Tigas29/weather-forecast-system.git)
+$ git clone (https://github.com/Tigas29/currency-calculator.git)
 
 # Go into the repository
 
@@ -35,7 +34,7 @@ $ git clone (https://github.com/Tigas29/weather-forecast-system.git)
 
 ```
 
-## :information_source:[Or click here!](https://weather-forecast-system.vercel.app/)
+## :information_source:[Or click here!](https://currency-calculator-mocha.vercel.app/)
 
 ## Result
 
