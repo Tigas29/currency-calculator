@@ -1,24 +1,5 @@
 const btn = document.getElementById("btn");
 
-function CheckFlag() {
-  if (coinFrom.value.indexOf("Real") >= 0) {
-    imgResultFrom.src = "./assets/brasil.png";
-  } else if (coinFrom.value.indexOf("Euro") >= 0) {
-    imgResultFrom.src = "./assets/euro.png";
-  } else if (coinFrom.value.indexOf("Dolar") >= 0) {
-    imgResultFrom.src = "./assets/dolar.png";
-  }
-
-  if (coinFor.value.indexOf("Real") >= 0) {
-    imgResultFor.src = "./assets/brasil.png";
-  } else if (coinFor.value.indexOf("Euro") >= 0) {
-    imgResultFor.src = "./assets/euro.png";
-  } else if (coinFor.value.indexOf("Dolar") >= 0) {
-    imgResultFor.src = "./assets/dolar.png";
-  }
-}
-
-function ErrorTreatment() {}
 function showResult(amountToShow, resultToShow) {
   let amountShow = document.getElementById("amountFrom");
   let amountFor = document.getElementById("amountFor");
@@ -42,51 +23,45 @@ function calculate(valueFor, valueFrom) {
 }
 
 function FormatValues(coinForValuecb, coinFromValuecb) {
-  let CoinForValue = null;
-  let CoinFromValue = null;
+  let coinFromResult = document.getElementById("coinFromResult");
+  let coinForResult = document.getElementById("coinForResult");
   let imgResultFrom = document.getElementById("imgResultFrom");
   let imgResultFor = document.getElementById("imgResultFor");
   let resultFrom = document.getElementById("resultFrom");
   let resultFor = document.getElementById("resultFor");
 
-  let coinFromResult = document.getElementById("coinFromResult");
-  let coinForResult = document.getElementById("coinForResult");
+  const coinValues = {
+    Real: {
+      value: 1,
+      image: "./assets/brasil.png",
+      symbol: "R$",
+      label: "Real",
+    },
+    Euro: {
+      value: 5.23,
+      image: "./assets/euro.png",
+      symbol: "€",
+      label: "Euro",
+    },
+    Dolar: {
+      value: 4,
+      image: "./assets/dolar.png",
+      symbol: "US$",
+      label: "Dolar",
+    },
+  };
 
-  if (coinFromValuecb.indexOf("Real") >= 0) {
-    CoinFromValue = 1;
-    resultFrom.innerText = "Real";
-    imgResultFrom.src = "./assets/brasil.png";
-    coinFromResult.innerText = "R$";
-  } else if (coinFromValuecb.indexOf("Euro") >= 0) {
-    CoinFromValue = 5.23;
-    imgResultFrom.src = "./assets/euro.png";
-    resultFrom.innerText = "Euro";
-    coinFromResult.innerText = "€";
-  } else if (coinFromValuecb.indexOf("Dolar") >= 0) {
-    CoinFromValue = 4;
-    resultFrom.innerText = "Dolar";
-    imgResultFrom.src = "./assets/dolar.png";
-    coinFromResult.innerText = "US$";
-  }
+  let coinFromValue = coinValues[coinFromValuecb];
+  resultFrom.innerText = coinFromValue.label;
+  imgResultFrom.src = coinFromValue.image;
+  coinFromResult.innerText = coinFromValue.symbol;
 
-  if (coinForValuecb.indexOf("Real") >= 0) {
-    CoinForValue = 1;
-    resultFor.innerText = "Real";
-    imgResultFor.src = "./assets/brasil.png";
-    coinForResult.innerText = "R$";
-  } else if (coinForValuecb.indexOf("Euro") >= 0) {
-    CoinForValue = 5.23;
-    resultFor.innerText = "Euro";
-    imgResultFor.src = "./assets/euro.png";
-    coinForResult.innerText = "€";
-  } else if (coinForValuecb.indexOf("Dolar") >= 0) {
-    CoinForValue = 4;
-    resultFor.innerText = "Dolar";
-    imgResultFor.src = "./assets/dolar.png";
-    coinForResult.innerText = "US$";
-  }
+  let coinForValue = coinValues[coinForValuecb];
+  resultFor.innerText = coinForValue.label;
+  imgResultFor.src = coinForValue.image;
+  coinForResult.innerText = coinForValue.symbol;
 
-  calculate(CoinForValue, CoinFromValue);
+  calculate(coinForValue.value, coinFromValue.value);
 }
 
 function clicked() {
@@ -94,4 +69,5 @@ function clicked() {
   const coinFrom = document.getElementById("coinFrom").value;
   FormatValues(coinFor, coinFrom);
 }
+
 btn.addEventListener("click", clicked);
