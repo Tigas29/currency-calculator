@@ -22,13 +22,18 @@ function calculate(valueFor, valueFrom) {
   showResult(amount, result);
 }
 
-function FormatValues(coinForValuecb, coinFromValuecb) {
+async function FormatValues(coinForValuecb, coinFromValuecb) {
   let coinFromResult = document.getElementById("coinFromResult");
   let coinForResult = document.getElementById("coinForResult");
   let imgResultFrom = document.getElementById("imgResultFrom");
   let imgResultFor = document.getElementById("imgResultFor");
   let resultFrom = document.getElementById("resultFrom");
   let resultFor = document.getElementById("resultFor");
+  const data = await fetch(
+    "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL"
+  ).then(function (response) {
+    return response.json();
+  });
 
   const coinValues = {
     Real: {
@@ -38,13 +43,13 @@ function FormatValues(coinForValuecb, coinFromValuecb) {
       label: "Real",
     },
     Euro: {
-      value: 5.23,
+      value: data.EURBRL.high,
       image: "./assets/euro.png",
       symbol: "€",
       label: "Euro",
     },
     Dolar: {
-      value: 4,
+      value: data.USDBRL.high,
       image: "./assets/dolar.png",
       symbol: "US$",
       label: "Dolar",
