@@ -1,6 +1,3 @@
-Here's the updated README with the new feature included:
-
----
 
 # Currency Calculator
 
@@ -34,6 +31,6 @@ To clone and run this application:
 ## Author
 Made with ♥ by Tiago Santos. [Get in touch!](https://www.linkedin.com/in/tiago-santos-)
 
----
 
-Feel free to customize this README further to fit your specific needs!
+
+
