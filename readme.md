@@ -1,45 +1,39 @@
-<h1 align="center">
-Currency Calculator
-</h1>
-<h3> 
-This application made in Vanilla JavaScript was thought to be a very easy usefull currency calculator system 
-to show some of my skills in Programming logic and learn more about JavaScript. In this project I used a execution algorithm and operations by selection.
+Here's the updated README with the new feature included:
 
-</h3>
-  
-  
-<p align="center">
-  <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#result">Result</a>
-</p>
+---
 
-## :rocket: Technologies
+# Currency Calculator
 
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [VS Code](https://code.visualstudio.com/) with [EditorConfig](https://editorconfig.org/), [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/).
+## Overview
+The Currency Calculator is a simple, user-friendly application developed in Vanilla JavaScript. It showcases programming logic skills and aims to enhance learning in JavaScript through a practical currency conversion tool.
 
-## :information_source: How To Use
+## Features
+- **Currency Conversion:** Calculate conversions between different currencies.
+- **API Integration:** Fetches real-time exchange rates using an external API.
+- **Selection-Based Operations:** Utilizes an algorithm for executing operations based on user selection.
+- **Responsive Design:** User interface built with HTML and CSS for a seamless experience across devices.
 
-To clone and run this application, you'll need [Git](https://git-scm.com), installed on your computer. From your command line:
+## Technologies
+- **JavaScript**
+- **HTML**
+- **CSS**
+- **VS Code** with **EditorConfig**, **ESLint**, and **Prettier**
 
-```bash
-# Clone this repository
-$ git clone (https://github.com/Tigas29/currency-calculator.git)
+## How to Use
+To clone and run this application:
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Tigas29/currency-calculator.git
+   ```
+2. Navigate into the repository.
+3. Open `index.html` in your browser to see the project in action.
 
-# Go into the repository
+## Live Demo
+[Click here to view the live demo](https://currency-calculator-mocha.vercel.app)
 
-# Open the .html to see de project
+## Author
+Made with ♥ by Tiago Santos. [Get in touch!](https://www.linkedin.com/in/tiago-santos-)
 
+---
 
-```
-
-## :information_source:[Or click here!](https://currency-calculator-mocha.vercel.app/)
-
-## Result
-
-<p align=center>
-<img src="https://github.com/Tigas29/currency-calculator/blob/main/assets/result.png" width="800">
-</p>
-
-Made with ♥ by Tiago Santos :wave: [Get in touch!](https://www.linkedin.com/in/tiagosantos-dev/)
+Feel free to customize this README further to fit your specific needs!
